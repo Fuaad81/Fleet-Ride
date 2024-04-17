@@ -1,18 +1,18 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
 import 'package:fleet_ride/user/user_home.dart';
-import 'package:fleet_ride/user/user_signup.dart';
+import 'package:fleet_ride/user/user_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class User_Login extends StatefulWidget {
-  const User_Login({super.key});
+class User_Signup extends StatefulWidget {
+  const User_Signup({super.key});
 
   @override
-  State<User_Login> createState() => _User_LoginState();
+  State<User_Signup> createState() => _User_SignupState();
 }
 
-class _User_LoginState extends State<User_Login> {
+class _User_SignupState extends State<User_Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class _User_LoginState extends State<User_Login> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Log in",
+                          "Register",
                           style: GoogleFonts.kranky(
                               textStyle: TextStyle(
                                   fontSize: 30, fontWeight: FontWeight.w500)),
@@ -73,6 +73,62 @@ class _User_LoginState extends State<User_Login> {
                       ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: Icon(Icons.lock_outline),
+                                prefixIconColor: Colors.black,
+                                hintText: 'Password',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 19),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30)),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30))),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: Icon(Icons.email_outlined),
+                                prefixIconColor: Colors.black,
+                                hintText: 'Email',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 19),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30)),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30))),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -83,9 +139,9 @@ class _User_LoginState extends State<User_Login> {
                           decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              prefixIcon: Icon(Icons.lock_outline),
+                              prefixIcon: Icon(Icons.call_outlined),
                               prefixIconColor: Colors.black,
-                              hintText: 'Password',
+                              hintText: 'Phone number',
                               hintStyle:
                                   TextStyle(color: Colors.black, fontSize: 19),
                               enabledBorder: OutlineInputBorder(
@@ -127,22 +183,25 @@ class _User_LoginState extends State<User_Login> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don't have an Account?",style: GoogleFonts.poppins(
+                      Text(
+                        "Already have an account?",
+                        style: GoogleFonts.poppins(
                             textStyle:
-                                TextStyle(fontSize: 17, color: Colors.black))),
+                                TextStyle(fontSize: 17, color: Colors.black)),
+                      ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => User_Signup(),
-                                ));
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Login(),));
                           },
-                          child: Text("Sign Up",style: GoogleFonts.poppins(
+                          child: Text(
+                            "Log in",
+                            style: GoogleFonts.poppins(
                                 textStyle: TextStyle(
                                     fontSize: 17,
                                     color: Colors.black,
-                                    decoration: TextDecoration.underline))))
+                                    decoration: TextDecoration.underline)),
+                          ))
                     ],
                   )
                 ],
