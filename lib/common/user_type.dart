@@ -2,6 +2,7 @@
 
 import 'package:fleet_ride/admin/admin_login.dart';
 import 'package:fleet_ride/police/police_login.dart';
+import 'package:fleet_ride/user/user_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -96,26 +97,32 @@ class _User_TypeState extends State<User_Type> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(100),
-                          child: Image.asset(
-                            'images/proj_2.jpeg',
-                            width: 130,
-                            fit: BoxFit.cover,
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Login()));
+                      },
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.asset(
+                              'images/proj_2.jpeg',
+                              width: 130,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 45,top: 5),
-                          child: Text("USER",
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w700))),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 45,top: 5),
+                            child: Text("USER",
+                                style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w700))),
+                          )
+                        ],
+                      ),
                     ),
                     Stack(
                       children: [

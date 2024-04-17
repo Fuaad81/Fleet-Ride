@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:fleet_ride/police/police_add_laws.dart';
+import 'package:fleet_ride/police/police_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,7 +23,10 @@ class _Police_LowsState extends State<Police_Lows> {
               textStyle: TextStyle(fontSize: 25, color: Colors.black)),
         ),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.home_outlined))
+          IconButton(onPressed: () {
+            Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Police_Home()));
+          }, icon: Icon(Icons.home_outlined))
         ],
       ),
       body: Stack(
