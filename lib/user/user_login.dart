@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors
+// ignore_for_file: camel_case_types, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:fleet_ride/user/user_home.dart';
 import 'package:fleet_ride/user/user_signup.dart';

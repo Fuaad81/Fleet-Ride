@@ -1,5 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:fleet_ride/user/user_track_ride.dart';
+import 'package:fleet_ride/user/user_trip_request.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -42,7 +44,10 @@ class _User_HomeState extends State<User_Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Trip_Request(),));
+                    },
                     child: Container(
                       width: 300,
                       height: 50,
@@ -70,7 +75,10 @@ class _User_HomeState extends State<User_Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Track_Ride(),));
+                    },
                     child: Container(
                       width: 300,
                       height: 50,
