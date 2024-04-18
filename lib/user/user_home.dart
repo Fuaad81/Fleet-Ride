@@ -1,5 +1,9 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:fleet_ride/user/user_delivery-request.dart';
+import 'package:fleet_ride/user/user_facility_search.dart';
+import 'package:fleet_ride/user/user_helpline.dart';
+import 'package:fleet_ride/user/user_profile.dart';
 import 'package:fleet_ride/user/user_track_ride.dart';
 import 'package:fleet_ride/user/user_trip_request.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +28,10 @@ class _User_HomeState extends State<User_Home> {
               textStyle: TextStyle(fontSize: 25, color: Colors.black)),
         ),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.person_outline))
+          IconButton(onPressed: () {
+            Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Prfile  (),));
+          }, icon: Icon(Icons.person_outline))
         ],
       ),
       body: Stack(
@@ -106,7 +113,10 @@ class _User_HomeState extends State<User_Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Delivery_Request(),));
+                    },
                     child: Container(
                       width: 300,
                       height: 50,
@@ -134,7 +144,10 @@ class _User_HomeState extends State<User_Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Facility_Search(),));
+                    },
                     child: Container(
                       width: 300,
                       height: 50,
@@ -162,7 +175,10 @@ class _User_HomeState extends State<User_Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => User_Helpline(),));
+                    },
                     child: Container(
                       width: 300,
                       height: 50,
