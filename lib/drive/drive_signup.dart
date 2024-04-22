@@ -1,18 +1,18 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, sized_box_for_whitespace
 
-import 'package:fleet_ride/user/user_home.dart';
-import 'package:fleet_ride/user/user_login.dart';
+import 'package:fleet_ride/drive/drive_home.dart';
+import 'package:fleet_ride/drive/drive_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class User_Signup extends StatefulWidget {
-  const User_Signup({super.key});
+class Drive_Signup extends StatefulWidget {
+  const Drive_Signup({super.key});
 
   @override
-  State<User_Signup> createState() => _User_SignupState();
+  State<Drive_Signup> createState() => _Drive_SignupState();
 }
 
-class _User_SignupState extends State<User_Signup> {
+class _Drive_SignupState extends State<Drive_Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,6 +129,34 @@ class _User_SignupState extends State<User_Signup> {
                       ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: Icon(Icons.call_outlined),
+                                prefixIconColor: Colors.black,
+                                hintText: 'Phone number',
+                                hintStyle:
+                                    TextStyle(color: Colors.black, fontSize: 19),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30)),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30))),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -139,9 +167,9 @@ class _User_SignupState extends State<User_Signup> {
                           decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              prefixIcon: Icon(Icons.call_outlined),
+                              prefixIcon: Icon(Icons.credit_card),
                               prefixIconColor: Colors.black,
-                              hintText: 'Phone number',
+                              hintText: 'License Number',
                               hintStyle:
                                   TextStyle(color: Colors.black, fontSize: 19),
                               enabledBorder: OutlineInputBorder(
@@ -174,7 +202,7 @@ class _User_SignupState extends State<User_Signup> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => User_Home()));
+                                      builder: (context) => Drive_Home()));
                             },
                             child: Text("Log in"))
                       ],
@@ -192,7 +220,7 @@ class _User_SignupState extends State<User_Signup> {
                       TextButton(
                           onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => User_Login(),));
+                        context, MaterialPageRoute(builder: (context) => Drive_Login(),));
                           },
                           child: Text(
                             "Log in",

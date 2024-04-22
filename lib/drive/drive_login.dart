@@ -1,18 +1,18 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, sized_box_for_whitespace
 
-import 'package:fleet_ride/user/user_home.dart';
-import 'package:fleet_ride/user/user_login.dart';
+import 'package:fleet_ride/drive/drive_home.dart';
+import 'package:fleet_ride/drive/drive_signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class User_Signup extends StatefulWidget {
-  const User_Signup({super.key});
+class Drive_Login extends StatefulWidget {
+  const Drive_Login({super.key});
 
   @override
-  State<User_Signup> createState() => _User_SignupState();
+  State<Drive_Login> createState() => _Drive_LoginState();
 }
 
-class _User_SignupState extends State<User_Signup> {
+class _Drive_LoginState extends State<Drive_Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class _User_SignupState extends State<User_Signup> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Register",
+                          "Log in",
                           style: GoogleFonts.kranky(
                               textStyle: TextStyle(
                                   fontSize: 30, fontWeight: FontWeight.w500)),
@@ -73,62 +73,6 @@ class _User_SignupState extends State<User_Signup> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 40),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 350,
-                          height: 50,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                prefixIcon: Icon(Icons.lock_outline),
-                                prefixIconColor: Colors.black,
-                                hintText: 'Password',
-                                hintStyle: TextStyle(
-                                    color: Colors.black, fontSize: 19),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide.none,
-                                    borderRadius: BorderRadius.circular(30)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide.none,
-                                    borderRadius: BorderRadius.circular(30))),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 40),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 350,
-                          height: 50,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                prefixIcon: Icon(Icons.email_outlined),
-                                prefixIconColor: Colors.black,
-                                hintText: 'Email',
-                                hintStyle: TextStyle(
-                                    color: Colors.black, fontSize: 19),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide.none,
-                                    borderRadius: BorderRadius.circular(30)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide.none,
-                                    borderRadius: BorderRadius.circular(30))),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -139,9 +83,9 @@ class _User_SignupState extends State<User_Signup> {
                           decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              prefixIcon: Icon(Icons.call_outlined),
+                              prefixIcon: Icon(Icons.lock_outline),
                               prefixIconColor: Colors.black,
-                              hintText: 'Phone number',
+                              hintText: 'Password',
                               hintStyle:
                                   TextStyle(color: Colors.black, fontSize: 19),
                               enabledBorder: OutlineInputBorder(
@@ -174,7 +118,7 @@ class _User_SignupState extends State<User_Signup> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => User_Home()));
+                                      builder: (context) => Drive_Home()));
                             },
                             child: Text("Log in"))
                       ],
@@ -183,25 +127,22 @@ class _User_SignupState extends State<User_Signup> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "Already have an account?",
-                        style: GoogleFonts.poppins(
+                      Text("Don't have an Account?",style: GoogleFonts.poppins(
                             textStyle:
-                                TextStyle(fontSize: 17, color: Colors.black)),
-                      ),
+                                TextStyle(fontSize: 17, color: Colors.black))),
                       TextButton(
                           onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => User_Login(),));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Drive_Signup(),
+                                ));
                           },
-                          child: Text(
-                            "Log in",
-                            style: GoogleFonts.poppins(
+                          child: Text("Sign Up",style: GoogleFonts.poppins(
                                 textStyle: TextStyle(
                                     fontSize: 17,
                                     color: Colors.black,
-                                    decoration: TextDecoration.underline)),
-                          ))
+                                    decoration: TextDecoration.underline))))
                     ],
                   )
                 ],
