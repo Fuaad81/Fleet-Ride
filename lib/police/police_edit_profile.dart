@@ -3,6 +3,7 @@
 import 'package:fleet_ride/police/police_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 
 class Police_Edit_Profile extends StatefulWidget {
   const Police_Edit_Profile({super.key});
@@ -25,7 +26,7 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
           IconButton(onPressed: () {
             Navigator.push(
                         context, MaterialPageRoute(builder: (context) => Police_Home()));
-          }, icon: Icon(Icons.home_outlined))
+          }, icon: Icon(IconlyLight.home))
         ],
       ),
       body: Column(

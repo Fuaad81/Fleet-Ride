@@ -3,6 +3,7 @@
 import 'package:fleet_ride/admin/admin_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 
 class Admin_User_Manage extends StatefulWidget {
   const Admin_User_Manage({super.key});
@@ -29,7 +30,7 @@ class _Admin_User_ManageState extends State<Admin_User_Manage> {
                 context, MaterialPageRoute(
                   builder: (context) => Admin_Home(),));
             },
-            icon: Icon(Icons.home_outlined))
+            icon: Icon(IconlyLight.home))
         ],
       ),
       body: Column(

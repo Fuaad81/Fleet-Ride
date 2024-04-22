@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:fleet_ride/drive/drive_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,7 +47,8 @@ class _Drive_HomeState extends State<Drive_Home> {
                   children: [
                     InkWell(
                       onTap: () {
-                        
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>Drive_Routes()));
                       },
                       child: Container(
                         width: 300,

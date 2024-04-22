@@ -5,6 +5,7 @@ import 'package:fleet_ride/police/police_home.dart';
 import 'package:fleet_ride/police/police_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 
 class Police_Profile extends StatefulWidget {
   const Police_Profile({super.key});
@@ -26,7 +27,7 @@ class _Police_ProfileState extends State<Police_Profile> {
           IconButton(onPressed: () {
             Navigator.push(
                         context, MaterialPageRoute(builder: (context) => Police_Home()));
-          }, icon: Icon(Icons.home_outlined))
+          }, icon: Icon(IconlyLight.home))
         ],
       ),
       body: Column(

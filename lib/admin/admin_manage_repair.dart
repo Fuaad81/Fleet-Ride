@@ -3,6 +3,7 @@
 import 'package:fleet_ride/admin/admin_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 
 class Admin_Manage_Repair extends StatefulWidget {
   const Admin_Manage_Repair({super.key});
@@ -29,7 +30,7 @@ class _Admin_Manage_RepairState extends State<Admin_Manage_Repair> {
                 context, MaterialPageRoute(
                   builder: (context) => Admin_Home(),));
             },
-            icon: Icon(Icons.home_outlined))
+            icon: Icon(IconlyLight.home))
         ],
       ),
       body: Column(
