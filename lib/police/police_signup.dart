@@ -176,7 +176,7 @@ class _Police_SignupState extends State<Police_Signup> {
                                   MaterialPageRoute(
                                       builder: (context) => Police_Home()));
                             },
-                            child: Text("Log in"))
+                            child: Text("Register"))
                       ],
                     ),
                   ),

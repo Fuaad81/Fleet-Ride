@@ -204,7 +204,7 @@ class _Drive_SignupState extends State<Drive_Signup> {
                                   MaterialPageRoute(
                                       builder: (context) => Drive_Home()));
                             },
-                            child: Text("Log in"))
+                            child: Text("Register"))
                       ],
                     ),
                   ),

@@ -176,7 +176,7 @@ class _User_SignupState extends State<User_Signup> {
                                   MaterialPageRoute(
                                       builder: (context) => User_Home()));
                             },
-                            child: Text("Log in"))
+                            child: Text("Register"))
                       ],
                     ),
                   ),
