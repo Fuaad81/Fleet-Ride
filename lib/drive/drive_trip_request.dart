@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:fleet_ride/drive/drive_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
@@ -17,7 +18,10 @@ class _Drive_Trip_RequestState extends State<Drive_Trip_Request> {
     return Scaffold(
       appBar: AppBar(
         title: Text("FLEET RIDE"),
-        actions: [IconButton(onPressed: () {}, icon: Icon(IconlyLight.home))],
+        actions: [IconButton(onPressed: () {
+          Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Drive_Home(),));
+        }, icon: Icon(IconlyLight.home))],
       ),
       body: Column(
         children: [

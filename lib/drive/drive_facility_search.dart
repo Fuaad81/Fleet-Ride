@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
+import 'package:fleet_ride/drive/drive_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
@@ -19,7 +20,10 @@ class _Drive_Facilty_SearchState extends State<Drive_Facilty_Search> {
         title: Text("FLEET RIDE"),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(IconlyLight.search)),
-          IconButton(onPressed: () {}, icon: Icon(IconlyLight.home)),
+          IconButton(onPressed: () {
+            Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Drive_Home(),));
+          }, icon: Icon(IconlyLight.home)),
         ],
       ),
       body: Column(

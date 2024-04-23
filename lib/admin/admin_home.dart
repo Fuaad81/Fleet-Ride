@@ -2,6 +2,7 @@
 
 import 'package:fleet_ride/admin/admin_driver_manage.dart';
 import 'package:fleet_ride/admin/admin_laws.dart';
+import 'package:fleet_ride/admin/admin_login.dart';
 import 'package:fleet_ride/admin/admin_manage_helpline.dart';
 import 'package:fleet_ride/admin/admin_manage_repair.dart';
 import 'package:fleet_ride/admin/admin_trip_manage.dart';
@@ -37,7 +38,10 @@ class _Admin_HomeState extends State<Admin_Home> {
                 style: GoogleFonts.itim(
                     textStyle: TextStyle(fontSize: 20, color: Colors.black)),
               )),
-          IconButton(onPressed: () {}, icon: Icon(Icons.logout))
+          IconButton(onPressed: () {
+            Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Admin_Login(),));
+          }, icon: Icon(Icons.logout))
         ],
       ),
       body: Stack(

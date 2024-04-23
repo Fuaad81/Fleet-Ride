@@ -3,6 +3,7 @@
 import 'package:fleet_ride/admin/admin_login.dart';
 import 'package:fleet_ride/drive/drive_login.dart';
 import 'package:fleet_ride/police/police_login.dart';
+import 'package:fleet_ride/repair/repair_login.dart';
 import 'package:fleet_ride/trip_community/community_login.dart';
 import 'package:fleet_ride/user/user_login.dart';
 import 'package:flutter/material.dart';
@@ -201,27 +202,33 @@ class _User_TypeState extends State<User_Type> {
                         ],
                       ),
                     ),
-                    Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(100),
-                          child: Image.asset(
-                            'images/proj_5.jpeg',
-                            width: 130,
-                            height: 130,
-                            fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Repair_Login(),));
+                      },
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.asset(
+                              'images/proj_5.jpeg',
+                              width: 130,
+                              height: 130,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 40,top: 5),
-                          child: Text("REPAIR",
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w700))),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 40,top: 5),
+                            child: Text("REPAIR",
+                                style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w700))),
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),

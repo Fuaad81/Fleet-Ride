@@ -1,18 +1,18 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types, sized_box_for_whitespace
+// ignore_for_file: camel_case_types, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:fleet_ride/repair/repair_home.dart';
-import 'package:fleet_ride/repair/repair_signup.dart';
+import 'package:fleet_ride/repair/repair_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Repair_Login extends StatefulWidget {
-  const Repair_Login({super.key});
+class Repair_Signup extends StatefulWidget {
+  const Repair_Signup({super.key});
 
   @override
-  State<Repair_Login> createState() => _Repair_LoginState();
+  State<Repair_Signup> createState() => _Repair_SignupState();
 }
 
-class _Repair_LoginState extends State<Repair_Login> {
+class _Repair_SignupState extends State<Repair_Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class _Repair_LoginState extends State<Repair_Login> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Log in",
+                          "Register",
                           style: GoogleFonts.kranky(
                               textStyle: TextStyle(
                                   fontSize: 30, fontWeight: FontWeight.w500)),
@@ -73,6 +73,62 @@ class _Repair_LoginState extends State<Repair_Login> {
                       ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: Icon(Icons.lock_outline),
+                                prefixIconColor: Colors.black,
+                                hintText: 'Password',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 19),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30)),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30))),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: Icon(Icons.email_outlined),
+                                prefixIconColor: Colors.black,
+                                hintText: 'Email',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 19),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30)),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(30))),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -83,9 +139,9 @@ class _Repair_LoginState extends State<Repair_Login> {
                           decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              prefixIcon: Icon(Icons.lock_outline),
+                              prefixIcon: Icon(Icons.call_outlined),
                               prefixIconColor: Colors.black,
-                              hintText: 'Password',
+                              hintText: 'Phone number',
                               hintStyle:
                                   TextStyle(color: Colors.black, fontSize: 19),
                               enabledBorder: OutlineInputBorder(
@@ -120,29 +176,32 @@ class _Repair_LoginState extends State<Repair_Login> {
                                   MaterialPageRoute(
                                       builder: (context) => Repair_Home()));
                             },
-                            child: Text("Log in"))
+                            child: Text("Register"))
                       ],
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don't have an Account?",style: GoogleFonts.poppins(
+                      Text(
+                        "Already have an account?",
+                        style: GoogleFonts.poppins(
                             textStyle:
-                                TextStyle(fontSize: 17, color: Colors.black))),
+                                TextStyle(fontSize: 17, color: Colors.black)),
+                      ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Repair_Signup(),
-                                ));
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Repair_Login(),));
                           },
-                          child: Text("Sign Up",style: GoogleFonts.poppins(
+                          child: Text(
+                            "Log in",
+                            style: GoogleFonts.poppins(
                                 textStyle: TextStyle(
                                     fontSize: 17,
                                     color: Colors.black,
-                                    decoration: TextDecoration.underline))))
+                                    decoration: TextDecoration.underline)),
+                          ))
                     ],
                   )
                 ],

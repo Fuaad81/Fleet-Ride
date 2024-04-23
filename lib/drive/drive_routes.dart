@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import
 
+import 'package:fleet_ride/drive/drive_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,10 @@ class _Drive_RoutesState extends State<Drive_Routes> {
         title: Text("FLEET RIDE"),
         actions: [
           IconButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Drive_Home(),));
+            },
             icon: Icon(IconlyLight.home))
         ],
       ),

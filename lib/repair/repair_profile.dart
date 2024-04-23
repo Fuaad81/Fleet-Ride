@@ -1,20 +1,20 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
-import 'package:fleet_ride/drive/drive_home.dart';
-import 'package:fleet_ride/drive/drive_login.dart';
-import 'package:fleet_ride/drive/drive_profile_edit.dart';
+import 'package:fleet_ride/repair/repair_edit_profile.dart';
+import 'package:fleet_ride/repair/repair_home.dart';
+import 'package:fleet_ride/repair/repair_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
-class Drive_Profile extends StatefulWidget {
-  const Drive_Profile({super.key});
+class Repair_Profile extends StatefulWidget {
+  const Repair_Profile({super.key});
 
   @override
-  State<Drive_Profile> createState() => _Drive_ProfileState();
+  State<Repair_Profile> createState() => _Repair_ProfileState();
 }
 
-class _Drive_ProfileState extends State<Drive_Profile> {
+class _Repair_ProfileState extends State<Repair_Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class _Drive_ProfileState extends State<Drive_Profile> {
         actions: [
           IconButton(onPressed: () {
             Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Drive_Home()));
+                        context, MaterialPageRoute(builder: (context) => Repair_Home()));
           }, icon: Icon(IconlyLight.home))
         ],
       ),
@@ -56,12 +56,12 @@ class _Drive_ProfileState extends State<Drive_Profile> {
                   child: Column(
                     children: [
                       Text(
-                        "Driver Name",
+                        "User Name",
                         style: GoogleFonts.cardo(
                             textStyle: TextStyle(fontSize: 25)),
                       ),
                       Text(
-                        "Driver id",
+                        "User id",
                         style: GoogleFonts.cardo(
                             textStyle: TextStyle(fontSize: 20)),
                       ),
@@ -110,25 +110,6 @@ class _Drive_ProfileState extends State<Drive_Profile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 30, left: 40),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.credit_card_outlined,
-                  size: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: Text(
-                    "license number",
-                    style:
-                        GoogleFonts.cardo(textStyle: TextStyle(fontSize: 20)),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Padding(
             padding: const EdgeInsets.only(
               top: 80,
             ),
@@ -142,7 +123,7 @@ class _Drive_ProfileState extends State<Drive_Profile> {
                       foregroundColor: MaterialStatePropertyAll(Colors.black)),
                   onPressed: () {
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Drive_Profile_Edit()));
+                        context, MaterialPageRoute(builder: (context) =>Repair_Edit_Profile()));
                   },
                   child: Text(
                     "Edit",
@@ -164,7 +145,7 @@ class _Drive_ProfileState extends State<Drive_Profile> {
                 TextButton(
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Drive_Login()));
+                        context, MaterialPageRoute(builder: (context) => Repair_Login()));
                     },
                     child: Text(
                       "Logout",
