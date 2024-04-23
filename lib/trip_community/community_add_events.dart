@@ -1,18 +1,18 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
-import 'package:fleet_ride/police/police_home.dart';
+import 'package:fleet_ride/trip_community/community_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
-class Police_Edit_Profile extends StatefulWidget {
-  const Police_Edit_Profile({super.key});
+class Community_Add_Events extends StatefulWidget {
+  const Community_Add_Events({super.key});
 
   @override
-  State<Police_Edit_Profile> createState() => _Police_Edit_ProfileState();
+  State<Community_Add_Events> createState() => _Community_Add_EventsState();
 }
 
-class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
+class _Community_Add_EventsState extends State<Community_Add_Events> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
         actions: [
           IconButton(onPressed: () {
             Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Police_Home()));
+                        context, MaterialPageRoute(builder: (context) => Community_Home()));
           }, icon: Icon(IconlyLight.home))
         ],
       ),
@@ -55,7 +55,7 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
                   child: TextFormField(
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.person_2_outlined),
-                        hintText: 'Username',
+                        hintText: 'Event',
                         hintStyle: GoogleFonts.poppins(
                             textStyle:
                                 TextStyle(fontSize: 18, color: Colors.black)),
@@ -80,7 +80,32 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
                   child: TextFormField(
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.email_outlined),
-                        hintText: 'Email',
+                        hintText: 'Location',
+                        hintStyle: GoogleFonts.poppins(
+                            textStyle:
+                                TextStyle(fontSize: 18, color: Colors.black)),
+                        filled: true,
+                        fillColor: Colors.red.withOpacity(0.10),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(20))),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.access_time),
+                        hintText: 'Time',
                         hintStyle: GoogleFonts.poppins(
                             textStyle:
                                 TextStyle(fontSize: 18, color: Colors.black)),

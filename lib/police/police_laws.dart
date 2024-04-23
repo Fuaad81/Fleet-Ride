@@ -42,7 +42,7 @@ class _Police_LowsState extends State<Police_Lows> {
                     height: 100,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(227, 228, 228, 227)),
+                        color: Colors.red.withOpacity(0.10),),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -89,7 +89,7 @@ class _Police_LowsState extends State<Police_Lows> {
                       height: 100,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color.fromARGB(227, 228, 228, 227)),
+                          color: Colors.red.withOpacity(0.10),),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -134,7 +134,7 @@ class _Police_LowsState extends State<Police_Lows> {
             child: Padding(
               padding: const EdgeInsets.only(bottom: 20, right: 20),
               child: FloatingActionButton(
-                backgroundColor: Color.fromARGB(227, 228, 228, 227),
+                backgroundColor: Colors.red.withOpacity(0.10),
                 onPressed: () {
                   Navigator.push(
                       context,

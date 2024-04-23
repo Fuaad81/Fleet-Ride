@@ -1,18 +1,18 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
-import 'package:fleet_ride/police/police_home.dart';
+import 'package:fleet_ride/drive/drive_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
-class Police_Edit_Profile extends StatefulWidget {
-  const Police_Edit_Profile({super.key});
+class Drive_Profile_Edit extends StatefulWidget {
+  const Drive_Profile_Edit({super.key});
 
   @override
-  State<Police_Edit_Profile> createState() => _Police_Edit_ProfileState();
+  State<Drive_Profile_Edit> createState() => _Drive_Profile_EditState();
 }
 
-class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
+class _Drive_Profile_EditState extends State<Drive_Profile_Edit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
         actions: [
           IconButton(onPressed: () {
             Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Police_Home()));
+                        context, MaterialPageRoute(builder: (context) => Drive_Home()));
           }, icon: Icon(IconlyLight.home))
         ],
       ),
@@ -106,6 +106,31 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.call_outlined),
                         hintText: 'Phone number',
+                        hintStyle: GoogleFonts.poppins(
+                            textStyle:
+                                TextStyle(fontSize: 18, color: Colors.black)),
+                        filled: true,
+                        fillColor: Colors.red.withOpacity(0.10),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(20))),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.credit_card_outlined),
+                        hintText: 'License number',
                         hintStyle: GoogleFonts.poppins(
                             textStyle:
                                 TextStyle(fontSize: 18, color: Colors.black)),

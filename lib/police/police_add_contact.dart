@@ -60,7 +60,7 @@ class _Police_Add_ContactState extends State<Police_Add_Contact> {
                             textStyle:
                                 TextStyle(fontSize: 18, color: Colors.black)),
                         filled: true,
-                        fillColor: Color.fromARGB(227, 228, 228, 227),
+                        fillColor: Colors.red.withOpacity(0.10),
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.circular(20))),
@@ -85,7 +85,7 @@ class _Police_Add_ContactState extends State<Police_Add_Contact> {
                             textStyle:
                                 TextStyle(fontSize: 18, color: Colors.black)),
                         filled: true,
-                        fillColor: Color.fromARGB(227, 228, 228, 227),
+                        fillColor: Colors.red.withOpacity(0.10),
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.circular(20))),

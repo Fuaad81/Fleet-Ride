@@ -1,18 +1,18 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
-import 'package:fleet_ride/police/police_home.dart';
+import 'package:fleet_ride/trip_community/community_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
-class Police_Edit_Profile extends StatefulWidget {
-  const Police_Edit_Profile({super.key});
+class Community_Edit_Profile extends StatefulWidget {
+  const Community_Edit_Profile({super.key});
 
   @override
-  State<Police_Edit_Profile> createState() => _Police_Edit_ProfileState();
+  State<Community_Edit_Profile> createState() => _Community_Edit_ProfileState();
 }
 
-class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
+class _Community_Edit_ProfileState extends State<Community_Edit_Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _Police_Edit_ProfileState extends State<Police_Edit_Profile> {
         actions: [
           IconButton(onPressed: () {
             Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Police_Home()));
+                        context, MaterialPageRoute(builder: (context) => Community_Home()));
           }, icon: Icon(IconlyLight.home))
         ],
       ),

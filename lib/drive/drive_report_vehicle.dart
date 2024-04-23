@@ -1,18 +1,17 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import
+// ignore_for_file: camel_case_types, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
-class Drive_Routes extends StatefulWidget {
-  const Drive_Routes({super.key});
+class Drive_Report_Vehicle extends StatefulWidget {
+  const Drive_Report_Vehicle({super.key});
 
   @override
-  State<Drive_Routes> createState() => _Drive_RoutesState();
+  State<Drive_Report_Vehicle> createState() => _Drive_Report_VehicleState();
 }
 
-class _Drive_RoutesState extends State<Drive_Routes> {
+class _Drive_Report_VehicleState extends State<Drive_Report_Vehicle> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,12 +32,12 @@ class _Drive_RoutesState extends State<Drive_Routes> {
               children: [
                 SizedBox(
                   width: 300,
-                  height: 50,
+                  height: 60,
                   child: TextFormField(
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[200],
-                      hintText: 'From',
+                      hintText: 'Driver Name',
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(30)
@@ -57,12 +56,36 @@ class _Drive_RoutesState extends State<Drive_Routes> {
               children: [
                 SizedBox(
                   width: 300,
-                  height: 50,
+                  height: 60,
                   child: TextFormField(
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[200],
-                      hintText: 'To',
+                      hintText: 'Vehicle No',
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(30)
+                      ),
+                      focusedBorder: OutlineInputBorder()
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 300,
+                  height: 60,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      hintText: 'Vehicle Issue',
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(30)
@@ -93,7 +116,7 @@ class _Drive_RoutesState extends State<Drive_Routes> {
                   onPressed: (){
                     Navigator.pop(context);
                   },
-                  child: Text("Create Trip"))
+                  child: Text("Report"))
               ],
             ),
           )

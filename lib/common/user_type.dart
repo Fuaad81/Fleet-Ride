@@ -3,6 +3,7 @@
 import 'package:fleet_ride/admin/admin_login.dart';
 import 'package:fleet_ride/drive/drive_login.dart';
 import 'package:fleet_ride/police/police_login.dart';
+import 'package:fleet_ride/trip_community/community_login.dart';
 import 'package:fleet_ride/user/user_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -161,38 +162,44 @@ class _User_TypeState extends State<User_Type> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(150),
-                          child: Image.asset(
-                            'images/proj_4.jpeg',
-                            width: 130,
-                            height: 130,
-                            fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Community_Login()));
+                      },
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(150),
+                            child: Image.asset(
+                              'images/proj_4.jpeg',
+                              width: 130,
+                              height: 130,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15,top: 5),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text("TRIP",
-                                  style: GoogleFonts.poppins(
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w700))),
-                              Text("COMMUNITY",
-                                  style: GoogleFonts.poppins(
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w700)))
-                            ],
-                          ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15,top: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text("TRIP",
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700))),
+                                Text("COMMUNITY",
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700)))
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Stack(
                       children: [

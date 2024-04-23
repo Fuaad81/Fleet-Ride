@@ -43,7 +43,7 @@ class _Admin_LawsState extends State<Admin_Laws> {
                 height: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  color: Color.fromARGB(227, 228, 228, 227)
+                  color: Colors.red.withOpacity(0.10),
                 ),
                 child: ListTile(
                   leading: Padding(
@@ -67,7 +67,7 @@ class _Admin_LawsState extends State<Admin_Laws> {
                   height: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
-                    color: Color.fromARGB(227, 228, 228, 227)
+                    color: Colors.red.withOpacity(0.10),
                   ),
                   child: ListTile(
                     leading: Padding(

@@ -1,6 +1,11 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:fleet_ride/drive/drive_delivery_request.dart';
+import 'package:fleet_ride/drive/drive_facility_search.dart';
+import 'package:fleet_ride/drive/drive_profile.dart';
+import 'package:fleet_ride/drive/drive_report_vehicle.dart';
 import 'package:fleet_ride/drive/drive_routes.dart';
+import 'package:fleet_ride/drive/drive_trip_request.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +29,10 @@ class _Drive_HomeState extends State<Drive_Home> {
         ),
         actions: [
           
-          IconButton(onPressed: () {}, icon: Icon(Icons.person_outline))
+          IconButton(onPressed: () {
+            Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Drive_Profile()));
+          }, icon: Icon(Icons.person_outline))
         ],
       ),
       body: Stack(
@@ -81,7 +89,8 @@ class _Drive_HomeState extends State<Drive_Home> {
                   children: [
                     InkWell(
                       onTap: () {
-                
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Drive_Trip_Request()));
                       },
                       child: Container(
                         width: 300,
@@ -113,7 +122,10 @@ class _Drive_HomeState extends State<Drive_Home> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Drive_Delivery_Request(),));
+                      },
                       child: Container(
                         width: 300,
                         height: 50,
@@ -145,7 +157,8 @@ class _Drive_HomeState extends State<Drive_Home> {
                   children: [
                     InkWell(
                       onTap: () {
-                        
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Drive_Report_Vehicle(),));
                       },
                       child: Container(
                         width: 300,
@@ -178,7 +191,8 @@ class _Drive_HomeState extends State<Drive_Home> {
                   children: [
                     InkWell(
                       onTap: () {
-                        
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Drive_Facilty_Search()));
                       },
                       child: Container(
                         width: 300,
